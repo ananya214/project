@@ -1,0 +1,787 @@
+* {
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove all paddings */
+    box-sizing: border-box; /* Includes padding and border in the element's width and height */
+  }
+  
+  .hero {
+  
+    height: 100vh; /* This makes the hero section take full viewport height */
+    width: 100%;
+  
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+  }
+  
+  .main2 {
+    background-image: url('https://images.pexels.com/photos/863926/pexels-photo-863926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* put your image path here */
+    background-size: cover;     /* make image cover the full section */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat; /* no repeating tiles */
+  }
+  
+  
+  
+   /*scrolling-text*/
+   .scroll-container {
+    width: 100%;
+    overflow: hidden;
+  
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+   
+  
+  }
+  
+  
+  .scroll-track1 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .scroll-text1 {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 18px;
+    color: black;
+  
+    font-family: 'Segoe UI', cursive;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .navbar {
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    padding-right: 30px;
+    background-color: transparent;
+  }
+  
+  
+  .logo {
+    height: 80px;
+    width: 200px;
+  }
+  
+  .logo img {
+    height: 80px;
+    width: 100%;
+    object-fit: contain;
+  }
+  .left {
+    display: flex;
+    justify-content: flex-end;  /* Align all items to the right */
+    align-items: center;  /* Vertically align the items */
+    width: 100%;  /* Ensures the container spans the full width */
+    gap: 10px;  /* Adds a little space between elements */
+  }
+  
+  .center-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  /* Adds space between nav links */
+  }
+  
+  .nav-links {
+   
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    background-color: maroon;
+    padding: 15px;
+    border-radius: 24px;
+  }
+  
+  .nav-links li a {
+    position: relative;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: wheat;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Magical background */
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    background: wheat;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+  }
+  
+  /* On hover, background expands */
+  .nav-links li a:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Optional text color change */
+  .nav-links li a:hover {
+    color: black;
+  }
+  
+  
+  .info-bar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fffae6;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .info-bar p {
+    font-size: 20px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  
+  /* Search icon styling */
+  .sear {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Icon styling */
+  .sear i {
+    font-size: 22px;
+    background-color: maroon;
+    color: wheat;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Optional: Hover effect */
+  .sear i:hover {
+    background-color: wheat;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  /* Explore button styling */
+  .explore {
+    padding: 5px;
+    border: transparent;
+  }
+  
+  .explore button {
+    padding: 14px;
+    border-radius: 24px;
+    background-color: maroon;
+    font-size: 14px;
+    color: wheat;
+    border: transparent;
+  }
+  
+  .explore button:hover{
+    color: black;
+  }
+  
+  
+  
+  .main{
+    width: 100%;
+    padding: 0;
+  }
+   .main1{
+    
+    height:450px;
+    width: 65%;
+    padding: 40px;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 30px;
+   }
+  .head{
+    margin-left: 100px;
+    width: 400px;
+    align-items: center;
+    color: maroon;
+    margin-top: 80px;
+  
+  
+  }
+  .head h1{
+    font-size: 55px;
+    font-weight: 500px;
+  
+  }
+  .tx1{
+    width:600px;
+  }
+  .tx{
+  
+    color: black;
+  }
+  .button {
+    display: flex;
+    justify-content: flex-start; /* left-align buttons */
+    gap: 20px; /* small gap between them */
+    margin-top: 40px;
+    margin-left: 100px; /* optional: push from screen edge */
+  }
+  
+  .button1 button {
+    padding: 10px;
+    border-radius: 20px;
+    color: bisque;
+    background-color: black;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button1 button:hover{
+    color:whitesmoke;
+    background:rgba(0, 0, 0, 0.68);
+  }
+  
+  .small-text{
+    width: 400px;
+    border-radius: 30px;
+    margin-top:160px;
+  }
+  
+  .small-text i{
+    size: 10px;
+    color: black;
+    height: 5px;
+  }
+  .scroll-container1 {
+    margin-top: 98px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .scroll-logos {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-right-left 60s linear infinite;
+  }
+  
+  .scroll-logos img {
+    height: 50px;
+    margin: 0 30px;
+    filter: invert(1); /* white logos become black */
+  }
+  
+  @keyframes scroll-right-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center children horizontally */
+  
+    width: 100%;
+    padding: 60px 20px;
+  }
+  
+  .txt {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+  }
+  
+  .txt h1 {
+    color:black;
+    font-size: 36px;
+    line-height: 1.4;
+  }
+   /* Wrapper for the cards */
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;  /* Space between the cards */
+    justify-content: center;  /* Center cards in the container */
+    margin-top: 50px;  /* Add some space at the top */
+  }
+  
+  /* Each card pair */
+  .card-pair {
+    position: relative;
+    width: 28%; /* 3 cards per row */
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Upper card (visible) */
+  .upper-card {
+    background-color: maroon;
+    color: white;
+    padding: 30px;  /* Increased padding */
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    height: 350px; /* Increased height for taller cards */
+    width: 100%; /* Full width of its parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    
+  }
+  
+  .upper-card img{
+    height: 350px;
+    weight:100%;
+  }
+  /* Lower card (initially hidden on the right side) */
+  .lower-card {
+    position: absolute;
+    top: 0;
+    right: -100%; /* Initially off the screen to the right */
+    background-color: grey;
+    color: white;
+    padding: 30px;  /* Increased padding */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: right 0.3s ease-in-out;
+    z-index: -1;
+    width: 100%; /* Same width as upper card */
+    height: 350px; /* Increased height for taller cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Adjust font size for consistency */
+  }
+  
+  /* Hover effect: lower card slides from right */
+  .card-pair:hover .lower-card {
+    right: 0; /* Move the lower card into view from the right */
+  }
+  
+  .card-pair:hover .upper-card {
+    transform: translateX(-100%); /* Hide the upper card to the left */
+  }
+  
+  /* Adding some space when hovering a card */
+  .card-pair:hover {
+    transform: translateX(10px); /* Moves the card slightly to the right */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .card-pair {
+      width: 45%; /* 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-pair {
+      width: 90%; /* 1 card per row on very small screens */
+    }
+  }
+  
+  
+  .scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .text h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  
+  .scroll-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  .scroll-text {
+    background:maroon;
+    border-radius: 20px;
+    padding: 0 50px;
+    font-size: 95px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-weight: 300;
+  }
+  
+  .scroll-track.rtl {
+    animation: scroll-rtl 60s linear infinite;
+  }
+  
+  .scroll-track.ltr {
+    animation: scroll-ltr 60s linear infinite;
+  }
+  
+  @keyframes scroll-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes scroll-ltr {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }  
+  /* Container for the buttons */
+  .button3 {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    align-items: center;
+    gap: 10px; /* Space between buttons */
+    width: 100%; /* Control the width of the container */
+    margin: 0 auto; /* Centers the container in the page */
+    height: 80px; /* Fixed height for the container */
+    padding: 10px;
+    flex-wrap: wrap; /* Allows buttons to wrap if necessary */
+  }
+  
+  /* Styling for each button */
+  .button3 .btn {
+    position: relative;
+    font-size: 12px; /* Smaller font size */
+    text-align: center;
+    color: white;
+    background-color: maroon;
+    width: 150px; /* Set width of the buttons */
+    padding: 13px; /* Smaller padding for smaller buttons */
+    border-radius: 30px;
+    overflow: hidden; /* Prevents content from overflowing */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  /* Create a fill effect using the :before pseudo-element */
+  .button3 .btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Start from 0% */
+    height: 100%;
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0.356); /* Fill color */
+    transition: width 2s ease-in-out; /* Transition effect for the fill */
+  }
+  
+  /* When hovering the button, fill it from left to right */
+  .button3 .btn:hover:before {
+    width: 100%; /* Fill the button */
+  }
+  
+  /* Change button color when filled */
+  .button3 .btn:hover {
+    color: wheat; /* Change the text color to wheat when filled */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .button3 {
+      flex-direction: row; /* Ensure buttons are in row even on small screens */
+    }
+  
+    .button3 .btn {
+      width: 150px; /* Keep buttons the same size */
+      margin-bottom: 10px; /* Add space between stacked buttons */
+    }
+  }
+  .part4{
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    height: 450px;
+    justify-content: space-around;
+    padding: 50px;
+  
+   
+  }
+  .prfr1 {
+    background-color: rgba(128, 0, 0, 0.476);
+    position: relative;
+    width: 45%;/* Adjust based on the container width */
+    height: 400px;
+    border-radius: 30px; /* Full viewport height (you can adjust this as needed) */
+  /* Hides anything outside of the div, including unwanted lines */
+  }
+  .prtx{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .prtx1{
+    
+    padding-left: 30px;
+    padding-right: 50px;
+  display: flex;
+  }
+  
+  .prtx2{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .prtx2 h3{
+    font-size: 30px;
+    font-weight: 300;
+   
+  }
+  .prtx2 p{
+    font-size: 20px;
+    font-weight: 300;
+  
+  }
+  
+  .prtx1 img{
+    height: 40px;
+    margin: 0 30px;
+    filter: invert(1);
+  }
+  
+  .prfr2{
+    
+    border-radius: 30px;
+    background-color: rgba(128, 0, 0, 0.476);
+    width: 45%;
+    height: 400px;
+  
+  }
+  .button4 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    gap: 10px;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Button Styling */
+  .button4 button {
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    background-color: maroon;
+    width: 150px;
+    padding: 13px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+  }
+  
+  /* Transparent fill effect on hover using pseudo-element */
+  .button4 button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+  
+    background-color: rgba(121, 27, 27, 0.629); /* Transparent fill */
+    transition: width 0.5s ease;
+    z-index: 0;
+  }
+  
+  /* On hover: fill grows, text color changes if needed */
+  .button4 button:hover::before {
+    width: 100%;
+  }
+  
+  .button4 button:hover {
+    color: whitesmoke;
+  }
+  
+  /* Make sure text is above the fill */
+  .button4 button span {
+    position: relative;
+    z-index: 2;
+  }
+  .part5 {
+   
+    display: flex; /* Add this to make flex work */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    height: 400px;
+    width: 100%;
+  }
+  
+  .prfv {
+    display: flex;
+    border-radius: 160px;
+    background-color: #E8C999;
+    width: 60%;
+    height: 350px;
+    padding: 20px;
+  
+  
+  }
+  
+  .prfv2{
+    
+    width:35%;
+    height: 100%;
+  
+  }
+  
+  .prfv1{
+    margin-top: 50px;
+    margin-left: 100px;
+    width:65%;
+    height: 100%;
+  }
+  
+  .prfvone{
+    gap: 20px;
+  }
+  
+  
+  .prfv1 h2{
+    font-size: 40px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .prfv1 button,a{
+    margin-top: 30px;
+  }
+  
+  .prfv1 button{
+    margin-right: 10px;
+    background-color:coral ;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+  
+  }
+  
+  .prfv1 a{
+    color: black;
+  }
+  
+  .part6 {
+    background: linear-gradient(135deg, orange, #ff7300);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .form-container p {
+    font-size: 16px;
+    margin: 10px auto 30px;
+    max-width: 600px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form-grid input,
+  .form-grid select {
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .checkbox-area {
+    text-align: left;
+    margin: 10px auto;
+    max-width: 600px;
+    font-size: 14px;
+  }
+  
+  .consent {
+    font-size: 12px;
+    color: #eee;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .submit-btn {
+    background-color: #003300;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005500;
+  }
+  
