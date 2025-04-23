@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scrolling Text + Responsive Navbar</title>
   <link rel="stylesheet" href="style.css" />
   <link
@@ -40,7 +40,16 @@
     <div class="logo">
       <img src="https://heagerindia.com/heager/wp-content/uploads/2025/04/Heager-Logo-300x147-removebg-preview-removebg-preview.png" alt="heager" class="logo_default_sticky">
     </div>
-  <div class="left">
+
+    <!-- Hamburger Icon for Mobile -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+  <div class="left" id="navmenu">
     
     <div class="center-nav">
       <ul class="nav-links">
@@ -76,7 +85,7 @@
     </div>
 
     
-  </div>  
+  </div> 
    
 
  
@@ -113,6 +122,7 @@
         <img src="https://upshop.wpenginepowered.com/wp-content/uploads/2025/01/cardenas-white-1.svg" alt="">
       </div>
     </div>
+    <hr>
   </div>
 </div>   
   <div class="card1">
@@ -122,91 +132,41 @@
     <div class="cards-wrapper">
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/868483/pexels-photo-868483.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-        <div class="lower-card"><p>Info behind 1</p></div>
+        <div class="lower-card"><p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit recusandae quas ab, esse error explicabo illum neque vitae placeat est qui nemo necessitatibus blanditiis fugit ratione incidunt quam, voluptatum et.</p></div>
       </div>
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/1153370/pexels-photo-1153370.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">></div>
-        <div class="lower-card"><p>Info behind 2</p></div>
+        <div class="lower-card"><p  class="one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati expedita nihil odit odio optio reiciendis eius cupiditate doloribus incidunt libero! Temporibus explicabo ullam saepe aspernatur numquam et voluptates tempore vel.</p></div>
       </div>
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/1346295/pexels-photo-1346295.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-        <div class="lower-card"><p>Info behind 3</p></div>
+        <div class="lower-card"><p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eius ea repudiandae sequi dignissimos culpa voluptatum pariatur architecto rem earum corrupti asperiores illo illum, sapiente non minima. Corrupti, itaque earum.</p></div>
       </div>
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/1375883/pexels-photo-1375883.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-        <div class="lower-card"><p>Info behind 4</p></div>
+        <div class="lower-card"><p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ut repellendus, aperiam magnam dolorum dicta at fuga recusandae unde numquam deserunt laudantium et veniam consequatur quae iusto amet incidunt odio.</p></div>
       </div>
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/868704/pexels-photo-868704.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-        <div class="lower-card"><p>Info behind 5</p></div>
+        <div class="lower-card"><p  class="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil porro atque ipsum minus laudantium incidunt nemo sunt dolores explicabo, quos repudiandae quis iusto commodi, fugiat odit debitis quas distinctio veniam.</p></div>
       </div>
       <div class="card-pair">
         <div class="upper-card"><img src="https://images.pexels.com/photos/2036998/pexels-photo-2036998.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></div>
-        <div class="lower-card"><p>Info behind 6</p></div>
+        <div class="lower-card"><p  class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis maiores laborum architecto quae ut rerum, maxime possimus voluptatum vitae doloremque molestiae exercitationem consequuntur sequi ipsa totam esse, suscipit impedit aperiam.</p></div>
       </div>
     </div>
     
     
     </div>
-
+<hr>
     <div class="scroll-wrapper">
-      <div class="text"><h2>The world’s leading food retailers</h2></div>
-       <div class="scroll">
-        <!-- Row 1: Right to Left -->
-        <div class="scroll-track rtl">
-          <div class="scroll-content">
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-       
-         
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-          </div>
-        </div>
-        
-        <!-- Row 2: Left to Right -->
-        <div class="scroll-track ltr">
-          <div class="scroll-content"><span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-         
-        
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-          </div>
-        </div>
-        
-        <!-- Row 3: Right to Left -->
-        <div class="scroll-track rtl">
-          <div class="scroll-content">
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
+      <div class="text"><h2>About us</h2></div>
+
+      <p>Heager India Pvt. Ltd. is a leading name in the medical equipment industry, specializing in advanced solutions for laparoscopy, hysteroscopy, colposcopy, CTG, and cosmetic & aesthetic medicine. With over two decades of expertise, we’ve earned the trust of doctors and healthcare professionals across the country</p>
+
+
+    </div>   
       
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-            <span class="scroll-text">Explore key takeaway</span>
-          </div>
-        </div>
-        </div>
 <hr>
 <div class="part3">
   <div class="button3">
@@ -217,41 +177,34 @@
 </div>
 
 <div class="part4">
-  <div class="prfr1">
- 
-
-  </div>
- 
-  <div class="prfr2">
-    
-
-  </div>
- 
-
- 
-  </div>
-  <div class="prtx">
-    <div class="prtx1">  <img src="https://upshop.wpenginepowered.com/wp-content/uploads/2024/11/spartan-nash-white.svg" alt="">
-      <div class="prtx2">
+  <div class="prfr-block">
+    <div class="prfr1">
+      <img src="https://images.pexels.com/photos/3775593/pexels-photo-3775593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+    </div>
+    <div class="prtx1">
+      <img src="https://upshop.wpenginepowered.com/wp-content/uploads/2024/11/spartan-nash-white.svg" alt="">
+      <div class="prtx-text">
         <h3>30% Faster Fulfillment</h3>
         <p>and reduced wait times with smarter eCommerce.</p>
-
-
       </div>
     </div>
+  </div>
 
-      <div class="prtx1">
-        <img src="https://upshop.wpenginepowered.com/wp-content/uploads/2025/01/cardenas-white-1.svg" alt="">
-        <div class="prtx2">
-          <h3>0% Bloat</h3>
-          <p>Perfect replenishment with truck-to-shelf inventory precision.</p>
-        
-
-         </div>
-    
-          </div>
-
+  <div class="prfr-block">
+    <div class="prfr2">
+      <img src="https://images.pexels.com/photos/4998828/pexels-photo-4998828.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+    </div>
+    <div class="prtx2">
+      <img src="https://upshop.wpenginepowered.com/wp-content/uploads/2025/01/cardenas-white-1.svg" alt="">
+      <div class="prtx-text">
+        <h3>0% Bloat</h3>
+        <p>Perfect replenishment with truck-to-shelf inventory precision.</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 <div class="button4">
   <button>Customer</button>
@@ -261,12 +214,18 @@
   <div class="prfv">
     <div class="prfv2">
 
+      <img src="https://images.pexels.com/photos/4324036/pexels-photo-4324036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+
     </div>
 <div class="prfv1">  
-  <h2>
+  <h2 class="prfvtxt">
     Take Upshop for a spin</h2>
 
-    <p>Get hands-on with our platform and explore powerful features that can transform your store's profitability.</p>
+    <p>Plot No 444, 2nd Floor Functional Industrial Estate Patparganj Industrial Area New Delhi-110092
+
+      Contact
+      Phone : ‪+91-9839062951‬
+      Mail Us : info@heagerindia.com </p>
   <div class="prfvone">
 
     <button>Take a Digital tour</button>
@@ -320,6 +279,7 @@
 
 
 </div>
+
 
 
 
