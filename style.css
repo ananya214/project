@@ -356,86 +356,79 @@ body::-webkit-scrollbar {
   .card1 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* center children horizontally */
-
+    align-items: center;
     width: 100%;
-    padding: 6% 2%; /* Top & Bottom: 6%, Left & Right: 2% */
+    padding: 6% 2%;
 }
 
-  
 .txt {
-  text-align: center;
-  margin-bottom: 4%;  /* Converted to percentage */
-  max-width: 80%;     /* Converted to percentage */
+    text-align: center;
+    margin-bottom: 4%;
+    max-width: 80%;
 }
 
-  
 .txt h1 {
-  color: black;
-  font-size: 156.25%;  /* Converted to percentage */
-  line-height: 1.4;    /* Remains the same */
+    color: black;
+    font-size: 2rem;
+    line-height: 1.4;
 }
 
-   /* Wrapper for the cards */
-  .cards-wrapper {
+.cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;  /* Space between the cards */
-    justify-content: center;  /* Center cards in the container */
-    margin-top: 5%;   /* Add some space at the top */
-  }
-  
-  /* Each card pair */
-  .card-pair {
+    gap: 30px;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.card-pair {
     position: relative;
-    width: 30%; /* 3 cards per row */
+    width: 30%;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  }
-  @media (max-width: 768px) {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
     .card-pair {
-      width: 45%; /* 2 cards per row */
+        width: 45%;
     }
-  }
-  
-  /* Adjust for very small screens */
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .card-pair {
-      width: 90%; /* 1 card per row */
+        width: 90%;
     }
-  }  
-  
-  /* Upper card (visible) */
-  .upper-card {
-  
+}
+
+.upper-card {
     color: white;
-    padding: 5%;  /* Padding as a percentage of the parent width */
-    text-align: center;
+    padding: 0; /* Remove padding so image can cover fully */
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    height: 40vh;  /* Height relative to the viewport height */
-    width: 100%; /* Full width of its parent */
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem; /* Relative font-size for better scaling */
-  }
-  
-  
-  .upper-card img{
-    height: 350px;
-    weight:100%;
-  }
-  .lower-card {
+}
+
+.upper-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lower-card {
     position: absolute;
     top: 0;
     right: -100%;
     background-color: maroon;
     color: #E8C999;
-    padding: 2% 10%; /* More balanced padding */
-    text-align: center;
+    padding: 2% 8%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
@@ -444,91 +437,80 @@ body::-webkit-scrollbar {
     height: 40vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* Better space distribution */
-    align-items: center;
-  }
-  
-  .lower-card .one {
-    font-size: 0.8vw; /* Slightly larger font */
-    line-height: 1.8; /* Increased line height for better readability */
-    margin: 0;
-    padding: 0 5%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    flex-grow: 1; /* Takes available space */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lower-card .one {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    font-weight: 500;
+    padding: 0 5%;
     width: 100%;
-    font-weight: 500; /* Medium weight for better visibility */
-  }
-  
-  .lower-card button {
-    padding: 0.4vh 0.5vh;
+    text-align: center;
+}
+
+.lower-card button {
+    padding: 0.6rem 1.2rem;
     background: #E8C999;
     color: maroon;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 0.5vh;
-    font-size: 1.1vw;
+    font-size: 1rem;
     font-weight: 600;
     transition: all 0.2s ease-out;
     min-width: 30%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    white-space: nowrap; /* Prevent button text wrapping */
-  }
-  
-  .lower-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.lower-card button:hover {
     background: white;
     transform: scale(1.03);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  /* Hover effect: lower card slides from right */
-  .card-pair:hover .lower-card {
-    right: 0; /* Move the lower card into view from the right */
-  }
-  
-  .card-pair:hover .upper-card {
-    transform: translateX(-100%); /* Hide the upper card to the left */
-  }
-  
-  /* Adding some space when hovering a card */
-  .card-pair:hover {
-    transform: translateX(5%); /* Moves the card 5% of its width to the right */
-  }
-  
-  /* Responsive design */
-  .scroll-wrapper {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-pair:hover .lower-card {
+    right: 0;
+}
+
+.card-pair:hover .upper-card {
+    transform: translateX(-100%);
+}
+
+.card-pair:hover {
+    transform: scale(1.02);
+}
+
+.scroll-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Horizontally centers child elements */
-    justify-content: center; /* Vertically centers child elements */
-    gap: 5%; /* Changed 30px to a percentage to maintain relative space */
-    padding: 10% 0; /* Adjusted padding for responsiveness */
-    overflow: hidden;
-    width: 100%; /* Full width of its parent */
-    max-width: 80%; /* Changed max-width to percentage for better control */
-    margin: 0 auto; /* Centers the wrapper itself */
-    text-align: center; /* Ensures text elements inherit center alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10% 0;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .text h2 {
-  text-align: center;
-  font-size: 2vw; /* Adjust font size relative to viewport width */
-  font-weight: 500;
-  margin: 0; /* Removes default margins */
-  width: 100%; /* Ensures full width for proper centering */
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
 }
 
 .scroll-wrapper p {
-  text-align: center;
-  font-size: 1vw; /* Adjust font size relative to viewport width */
-  font-weight: 500;
-  margin: 0; /* Removes default margins */
-  width: 100%; /* Ensures full width for proper centering */
-  max-width: 90%; /* Prevents text from stretching too wide */
-  padding: 0 5%; /* Adds breathing room on sides, responsive to viewport */
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    width: 100%;
+    max-width: 90%;
+    padding: 0 5%;
 }
 
   
