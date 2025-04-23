@@ -54,6 +54,7 @@ body::-webkit-scrollbar {
 
 }
 
+
 .scroll-container {
   width: 100%;
   overflow: hidden;
@@ -71,7 +72,7 @@ body::-webkit-scrollbar {
 .scroll-text1 {
   display: inline-block;
   padding: 0 2rem;
-  font-size: 13px;
+  font-size: 0.8125rem; /* Equivalent to 13px based on 16px root size */
   color: black;
   font-family: 'Segoe UI', cursive;
 }
@@ -88,65 +89,66 @@ body::-webkit-scrollbar {
   }
 }
 
-  .navbar {
-    height: 85px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    padding-right: 30px;
+.navbar {
+  height: 5.3125rem; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.875rem;  
+  background-color: transparent;
+}
 
-    background-color: transparent;
   
-  }
+.logo {
+  height: 5rem; 
+  width: 12.5rem;  
+}
+
   
+.logo img {
+  height: 5rem;  /* Equivalent to 80px */
+  width: 100%;  /* Takes up the full width of the container */
+  object-fit: contain;  /* Ensures the logo scales proportionally */
+}
+.left {
+  display: flex;
+  justify-content: flex-end;  /* Align all items to the right */
+  align-items: center;  /* Vertically align the items */
+  width: 100%;  /* Ensures the container spans the full width */
+  gap: 2%;  /* Adds a gap based on container width */
+}
+
   
-  .logo {
-    height: 80px;
-    width: 200px;
-  }
+.center-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;  /* Adds a gap based on container width */
+}
+
   
-  .logo img {
-    height: 80px;
-    width: 100%;
-    object-fit: contain;
-  }
-  .left {
-    display: flex;
-    justify-content: flex-end;  /* Align all items to the right */
-    align-items: center;  /* Vertically align the items */
-    width: 100%;  /* Ensures the container spans the full width */
-    gap: 10px;  /* Adds a little space between elements */
-  }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.3125rem;  /* Converts 5px to rem for scalability */
+  background-color: maroon;
+  padding: 0.9375rem;  /* Converts 15px to rem */
+  border-radius: 1.5rem;  /* Converts 24px to rem */
+}
+
   
-  .center-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;  /* Adds space between nav links */
-  }
-  
-  .nav-links {
-   
-    list-style: none;
-    display: flex;
-    gap: 5px;
-    background-color: maroon;
-    padding: 15px;
-    border-radius: 24px;
-  }
-  
-  .nav-links li a {
-    position: relative;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: wheat;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    z-index: 1;
-  }
+.nav-links li a {
+  position: relative;
+  padding: 0.625rem 1.25rem;  /* Converts 10px and 20px to rem */
+  text-decoration: none;
+  color: wheat;
+  border-radius: 1.25rem;  /* Converts 20px to rem */
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
   
   /* Magical background */
   .nav-links li a::before {
@@ -154,33 +156,35 @@ body::-webkit-scrollbar {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 0%;
-    height: 0%;
+    width: 0%;  /* Stays percentage-based */
+    height: 0%;  /* Stays percentage-based */
     background: wheat;
-    border-radius: 20px;
+    border-radius: 1.25rem;  /* Converts 20px to rem */
     transform: translate(-50%, -50%);
     transition: width 0.4s ease, height 0.4s ease;
     z-index: -1;
   }
   
+  
   /* On hover, background expands */
   .nav-links li a:hover::before {
-    width: 100%;
-    height: 100%;
+    width: 100%;  /* Stays percentage-based, responsive */
+    height: 100%;  /* Stays percentage-based, responsive */
   }
   
   /* Optional text color change */
   .nav-links li a:hover {
-    color: black;
+    color: black;  /* No change needed */
   }
+  
   
   
   .info-bar {
     position: absolute;
-    top: 70px;
+    top: 4.375rem;  /* Convert 70px to rem */
     left: 0;
-    width: 100%;
-    height: 0;
+    width: 100%;  /* Remains percentage-based */
+    height: 0;  /* Dynamic height, no change needed */
     background-color: #fffae6;
     overflow: hidden;
     transition: height 0.4s ease;
@@ -188,12 +192,11 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);  /* Convert px to rem */
   }
-  
   .info-bar p {
-    font-size: 20px;
-    padding: 20px;
+    font-size: 1.25rem;  /* Convert 20px to rem */
+    padding: 1.25rem;    /* Convert 20px to rem */
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -201,8 +204,8 @@ body::-webkit-scrollbar {
   
   /* Search icon styling */
   .sear {
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;  /* Convert 50px to rem */
+    width: 3.125rem;   /* Convert 50px to rem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,12 +214,13 @@ body::-webkit-scrollbar {
     z-index: 10;
   }
   
+  
   /* Icon styling */
   .sear i {
-    font-size: 22px;
+    font-size: 1.375rem;       /* Convert 22px to rem */
     background-color: maroon;
     color: wheat;
-    padding: 10px;
+    padding: 0.625rem;         /* Convert 10px to rem */
     border-radius: 50%;
     transition: all 0.3s ease;
   }
@@ -228,24 +232,26 @@ body::-webkit-scrollbar {
     transform: scale(1.1);
   }
   
+  
   /* Explore button styling */
   .explore {
-    padding: 5px;
+    padding: 0.3125rem;        /* Convert 5px to rem */
     border: transparent;
   }
   
   .explore button {
-    padding: 14px;
-    border-radius: 24px;
+    padding: 0.875rem;         /* Convert 14px to rem */
+    border-radius: 1.5rem;     /* Convert 24px to rem */
     background-color: maroon;
-    font-size: 14px;
+    font-size: 0.875rem;       /* Convert 14px to rem */
     color: wheat;
     border: transparent;
   }
   
-  .explore button:hover{
+  .explore button:hover {
     color: black;
   }
+  
   
   
   
@@ -253,43 +259,44 @@ body::-webkit-scrollbar {
     width: 100%;
     padding: 0;
   }
-   .main1{
-    
-    height:450px;
-    width: 65%;
-    padding: 40px;
+  .main1 {
+    height: 50vh;               /* Convert 450px to 50vh */
+    width: 65%;                 /* Keep 65% for responsive width */
+    padding: 2.5rem;            /* Convert 40px to 2.5rem */
     align-items: center;
-    margin-left: 30px;
-    margin-top: 30px;
-   }
-  .head{
-    margin-left: 100px;
-    width: 400px;
+    margin-left: 1.875rem;      /* Convert 30px to 1.875rem */
+    margin-top: 1.875rem;       /* Convert 30px to 1.875rem */
+  }
+  .head {
+    margin-left: 6.25rem;       /* Convert 100px to 6.25rem */
+    width: 50%;                 /* Adjust width to 50% for better responsiveness */
     align-items: center;
     color: maroon;
-    margin-top: 80px;
-  
-  
+    margin-top: 5rem;           /* Convert 80px to 5rem */
   }
-  .head h1{
-    font-size: 55px;
-    font-weight: 500px;
   
+  .head h1 {
+    font-size: 3.4375rem;   /* Convert 55px to rem */
+    font-weight: 500;       /* No need for px here, 500 is the correct value */
   }
-  .tx1{
-    width:600px;
-  }
-  .tx{
   
-    color: black;
+
+  .tx1 {
+    width: 80%;      /* 80% width of the parent container */
+    max-width: 600px; /* Ensure the width doesn't go beyond 600px */
   }
-  .button {
+  
+  .tx {
+    color: black;    /* Text color remains black */
+    font-size: 1rem; /* Optional: You can use rem for scalable font size */
+  }
+ .button {
     display: flex;
-    justify-content: flex-start; /* left-align buttons */
-    gap: 20px; /* small gap between them */
-    margin-top: 40px;
-    margin-left: 100px; /* optional: push from screen edge */
-  }
+    justify-content: flex-start; /* Left-align buttons */
+    gap: 5%; /* Small gap between buttons (using percentage for responsiveness) */
+    margin-top: 5%; /* Adjust top margin based on screen size */
+    margin-left: 10%; /* Push from the left edge using percentage for flexibility */
+}
   
   .button1 button {
     padding: 10px;
@@ -318,12 +325,13 @@ body::-webkit-scrollbar {
     height: 5px;
   }
   .scroll-container1 {
-    margin-top: 98px;
+    margin-top: 9.8%;  /* 98px as a percentage of parent container height */
     width: 100%;
     overflow: hidden;
     background-color: #ffffff;
-    padding: 20px 0;
+    padding: 2% 0;  /* 20px as a percentage of parent container height */
   }
+  
   
   .scroll-logos {
     display: inline-block;
@@ -349,86 +357,131 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center; /* center children horizontally */
-  
+
     width: 100%;
-    padding: 60px 20px;
-  }
+    padding: 6% 2%; /* Top & Bottom: 6%, Left & Right: 2% */
+}
+
   
-  .txt {
-    text-align: center;
-    margin-bottom: 40px;
-    max-width: 800px;
-  }
+.txt {
+  text-align: center;
+  margin-bottom: 4%;  /* Converted to percentage */
+  max-width: 80%;     /* Converted to percentage */
+}
+
   
-  .txt h1 {
-    color:black;
-    font-size: 25px;
-    line-height: 1.4;
-  }
+.txt h1 {
+  color: black;
+  font-size: 156.25%;  /* Converted to percentage */
+  line-height: 1.4;    /* Remains the same */
+}
+
    /* Wrapper for the cards */
   .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;  /* Space between the cards */
     justify-content: center;  /* Center cards in the container */
-    margin-top: 50px;  /* Add some space at the top */
+    margin-top: 5%;   /* Add some space at the top */
   }
   
   /* Each card pair */
   .card-pair {
     position: relative;
-    width: 28%; /* 3 cards per row */
+    width: 30%; /* 3 cards per row */
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   }
+  @media (max-width: 768px) {
+    .card-pair {
+      width: 45%; /* 2 cards per row */
+    }
+  }
+  
+  /* Adjust for very small screens */
+  @media (max-width: 480px) {
+    .card-pair {
+      width: 90%; /* 1 card per row */
+    }
+  }  
   
   /* Upper card (visible) */
   .upper-card {
-    background-color: maroon;
+  
     color: white;
-    padding: 30px;  /* Increased padding */
+    padding: 5%;  /* Padding as a percentage of the parent width */
     text-align: center;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    height: 350px; /* Increased height for taller cards */
+    height: 40vh;  /* Height relative to the viewport height */
     width: 100%; /* Full width of its parent */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    
+    font-size: 2rem; /* Relative font-size for better scaling */
   }
+  
   
   .upper-card img{
     height: 350px;
     weight:100%;
   }
-  /* Lower card (initially hidden on the right side) */
   .lower-card {
     position: absolute;
     top: 0;
-    right: -100%; /* Initially off the screen to the right */
-    background-color:#e7c48edf;
-    color: maroon;
-    padding: 30px;  
-    padding-left: 50px;/* Increased padding */
+    right: -100%;
+    background-color: maroon;
+    color: #E8C999;
+    padding: 2% 10%; /* More balanced padding */
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     z-index: -1;
-    width: 100%; /* Same width as upper card */
-    height: 350px; /* Increased height for taller cards */
+    width: 100%;
+    height: 40vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around; /* Better space distribution */
     align-items: center;
-    font-size: 20px; /* Adjust font size for consistency */
   }
-
-  .lower-card .one{
-    font-size: 15px ;
+  
+  .lower-card .one {
+    font-size: 0.8vw; /* Slightly larger font */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin: 0;
+    padding: 0 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Takes available space */
+    width: 100%;
+    font-weight: 500; /* Medium weight for better visibility */
+  }
+  
+  .lower-card button {
+    padding: 0.4vh 0.5vh;
+    background: #E8C999;
+    color: maroon;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 0.5vh;
+    font-size: 1.1vw;
+    font-weight: 600;
+    transition: all 0.2s ease-out;
+    min-width: 30%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    white-space: nowrap; /* Prevent button text wrapping */
+  }
+  
+  .lower-card button:hover {
+    background: white;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
   
   /* Hover effect: lower card slides from right */
@@ -442,66 +495,68 @@ body::-webkit-scrollbar {
   
   /* Adding some space when hovering a card */
   .card-pair:hover {
-    transform: translateX(10px); /* Moves the card slightly to the right */
+    transform: translateX(5%); /* Moves the card 5% of its width to the right */
   }
   
   /* Responsive design */
-
   .scroll-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center; /* Horizontally centers child elements */
     justify-content: center; /* Vertically centers child elements */
-    gap: 30px;
-    padding: 60px 0;
+    gap: 5%; /* Changed 30px to a percentage to maintain relative space */
+    padding: 10% 0; /* Adjusted padding for responsiveness */
     overflow: hidden;
-    width: 100%; /* Changed from 40% to 100% for better centering */
-    max-width: 800px; /* Added max-width for better control */
+    width: 100%; /* Full width of its parent */
+    max-width: 80%; /* Changed max-width to percentage for better control */
     margin: 0 auto; /* Centers the wrapper itself */
     text-align: center; /* Ensures text elements inherit center alignment */
-  }
-  
-  .text h2 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 500;
-    margin: 0; /* Removes default margins */
-    width: 100%; /* Ensures full width for proper centering */
-  }
-  
-  .scroll-wrapper p {
-    text-align: center;
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0; /* Removes default margins */
-    width: 100%; /* Ensures full width for proper centering */
-    max-width: 600px; /* Prevents text from stretching too wide */
-    padding: 0 20px; /* Adds breathing room on sides */
-  }
+}
+
+.text h2 {
+  text-align: center;
+  font-size: 2vw; /* Adjust font size relative to viewport width */
+  font-weight: 500;
+  margin: 0; /* Removes default margins */
+  width: 100%; /* Ensures full width for proper centering */
+}
+
+.scroll-wrapper p {
+  text-align: center;
+  font-size: 1vw; /* Adjust font size relative to viewport width */
+  font-weight: 500;
+  margin: 0; /* Removes default margins */
+  width: 100%; /* Ensures full width for proper centering */
+  max-width: 90%; /* Prevents text from stretching too wide */
+  padding: 0 5%; /* Adds breathing room on sides, responsive to viewport */
+}
+
   
 /* Container for the buttons */
 .button3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  padding: 20px 10px;
+  gap: 3%; /* Use percentage for spacing between buttons */
+  padding: 5% 2%; /* Adjust padding as a percentage of the container's width */
 }
+
 
 /* Base button styling */
 .button3 .btn {
   position: relative;
   background-color: #891633;    /* your brand maroon */
   color: white;
-  font-size: 13px;
-  padding: 10px 18px;
+  font-size: 0.95vw;  /* Scales font size based on the viewport width */
+  padding: 1% 2%;  /* Padding in percentage for responsiveness */
   border: none;
-  border-radius: 30px;
+  border-radius: 0 20% 0 20%;  /* Border radius in percentage for smooth rounding */
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0.2vw 0.8vw rgba(0, 0, 0, 0.1);  /* Scaled box shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 /* Hover “lift” effect */
 .button3 .btn:hover {
@@ -539,19 +594,19 @@ body::-webkit-scrollbar {
 .part4 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2%;         /* Replaces 20px with a percentage of parent height/width */
   width: 100%;
-  padding: 20px;
+  padding: 2%;     /* Replaces 20px padding with 2% for responsiveness */
 }
 
 /* Each card wrapper */
 .prfr-block {
   position: relative;
   width: 100%;
-  height: 400px;             /* adjust as needed */
-  border-radius: 20px;
+  height: 50vh; /* Replaces 400px with 50% of the viewport height */
+  border-radius: 2%;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 1.25vh 3.75vh rgba(0, 0, 0, 0.1); /* Converted px to vh for consistency */
 }
 
 /* Make the img fill the card */
@@ -565,30 +620,31 @@ body::-webkit-scrollbar {
   object-position: center;   /* center the crop */
 }
 
-.prfr1,.prfr2{
+.prfr1, .prfr2 {
   display: flex;
-  padding: 20px;
+  padding: 2%; /* Replaces 20px with 2% for responsive spacing */
 }
 
 /* Overlay container for text & logo */
 .prtx1,
 .prtx2 {
-  padding: 30px;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 2%; /* Responsive padding */
   background: linear-gradient(
     to top,
     rgba(128, 0, 0, 0.8) 0%,
     transparent 70%
   );
+
   color: #fff;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 2%; /* Changed to % for consistent spacing across screen sizes */
 }
+
 
 /* Logo inside overlay */
 
@@ -600,68 +656,70 @@ body::-webkit-scrollbar {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 30px; /* Increased padding */
+  padding: 2.5%; /* Converted from 30px to approx 2.5% */
   background: linear-gradient(to top, rgba(128, 0, 0, 0.85) 0%, transparent 100%);
   color: #fff;
   display: flex;
   align-items: flex-start; /* Align items to top */
-  gap: 25px; /* Space between logo and text */
+  gap: 2%; /* Converted from 25px to approx 2% */
   box-sizing: border-box; /* Include padding in width */
 }
 
 /* Logo container */
 .prtx1 img,
 .prtx2 img {
-  width: 80px; /* Slightly reduced from 100px */
+  width: 8%; /* Converted from 80px to approx 8% of the parent width */
   height: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  margin-top: 10px; /* Space from top */
+  margin-top: 1%; /* Converted from 10px to approx 1% */
   flex-shrink: 0; /* Prevent logo from shrinking */
 }
+
 
 /* Text container */
 .prtx-text {
   flex: 1; /* Take remaining space */
-  padding-right: 20px; /* Space from right edge */
+  padding-right: 2%; /* Converted from 20px to approx 2% */
 }
 
 /* Heading */
 .prtx-text h3 {
-  font-size: 22px;
-  margin: 0 0 8px 0; /* Bottom margin only */
+  font-size: 1.5vw; /* Responsive font size */
+  margin: 0 0 0.6vw 0; /* Bottom margin converted */
   line-height: 1.3;
 }
 
+
 /* Paragraph */
 .prtx-text p {
-  font-size: 15px;
+  font-size: 1.1vw; /* Responsive font size */
   margin: 0;
   line-height: 1.4;
   opacity: 0.9;
 }
+
 /* Container styling for the button */
 .button4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;     /* Vertical spacing around the button */
-  width: 100%;         /* Full-width container */
+  padding: 5% 0;      /* Vertical padding as percentage for responsiveness */
+  width: 100%;        /* Full-width container */
 }
+
 
 /* Base button styling */
 .button4 button {
-   
-  color: #E8C999;               /* Brand maroon */
-  border: transparent;    /* Maroon border */
-  border-radius:30px;         /* Capsule shape */
-  padding: 10px 24px;           /* Comfortable tappable area */
+  color: #E8C999;                  /* Brand maroon */
+  border: transparent;             /* Transparent border */
+  border-radius: 30px;             /* Capsule shape */
+  padding: 0.7% 2%;                  /* Comfortable tappable area in percentages */
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   background-color: maroon;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
 }
 
 /* Hover state */
@@ -721,29 +779,33 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 60px 20px;
+  padding: 8% 5%;  /* Responsive padding using percentages */
   background-color: #f8f8f8; /* Light background */
 }
+
 
 /* Main Card Container */
 .prfv {
   display: flex;
+  flex-direction: column;
   border-radius: 100px; /* Reduced from 160px for better proportions */
   background-color: #E8C999;
   width: 90%;
   max-width: 1000px; /* Maximum width */
   height: auto; /* Changed from fixed height */
-  min-height: 350px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  min-height: 20vh; /* 20% of the viewport height */
+  padding: 2% 1% 2% 2%; 
+  box-shadow: 0 2vw 5vw rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
+
 /* Image Section */
 .prfv2 {
-  width: 40%;
-  border-radius: 120px 0px 0px 120px ; /* Matches container */
+  width: 40%; /* Remains the same */
+  border-radius: 20% 0% 0% 20%; /* Adjusted border radius to percentages */
   overflow: hidden;
+  border-radius: 45% 0 0 45% ;
 }
 
 .prfv2 img {
@@ -759,43 +821,41 @@ body::-webkit-scrollbar {
 
 /* Content Section */
 .prfv1 {
-  width: 60%;
-  padding: 30px 40px;
+  width: 60%; /* Remains the same */
+  padding: 16% 10% 20% 10%; /* Converted padding into percentages */
   display: flex;
+
   flex-direction: column;
   justify-content: center;
 }
 
+
 .prfv1 h2.prfvtxt {
-  font-size: 32px;
+  font-size: 1vw; /* Responsive font size based on viewport width */
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 2%; /* Responsive margin based on the container's height */
   font-weight: 600;
   line-height: 1.2;
 }
 
+
 .prfv1 p {
-  font-size: 16px;
+  font-size: 1vw; /* Responsive font size based on viewport width */
   color: #555;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 4%; /* Responsive margin based on container height */
 }
 
+
 /* Button Container */
-.prfvone {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .prfv1 button {
   background-color: coral;
   color: white;
-  padding: 12px 30px;
+  padding: 3% 6%; /* Responsive padding */
   border-radius: 30px;
   border: none;
-  font-size: 16px;
+  font-size: 0.8vw; /* Responsive font size */
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1582,3 +1642,76 @@ body::-webkit-scrollbar {
     border-radius: 160px;
   }
 }
+
+
+
+/* Extra */
+.part7 {
+  height: 60vh;        /* Or any fixed/min-height */
+  
+  padding: 2% 0%;
+}
+
+.sv-one {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}.sv-img {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  width: 100%;
+ 
+  position: relative;
+}
+
+/* Double the content for seamless looping */
+.right-img,
+.left-img {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+  width: 200%; /* Double width to contain duplicate content */
+}
+
+/* Make images larger */
+.right-img img,
+.left-img img {
+  height: 120px; /* Fixed height for consistency */
+  width: auto; /* Maintain aspect ratio */
+  min-width: 150px; /* Minimum size */
+}
+
+/* Animation with duplicate content */
+.right-img {
+  animation: scrollRight 30s linear infinite;
+}
+
+.left-img {
+  animation: scrollLeft 30s linear infinite;
+}
+
+/* Keyframes adjusted for seamless looping */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half the container width */
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-50%); /* Start at halfway */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Duplicate the images in HTML or use JavaScript to clone them */
