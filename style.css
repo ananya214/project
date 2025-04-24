@@ -934,11 +934,11 @@ body::-webkit-scrollbar {
 }
 
 .right-img {
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 23s linear infinite;
 }
 
 .left-img {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 23s linear infinite;
 }
 
 @keyframes scrollRight {
@@ -958,7 +958,9 @@ body::-webkit-scrollbar {
     transform: translateX(0);
   }
 }
+/*--------------------------------------------------------------*/
 
+/*------------------------------------------------------*/
 @media (max-width: 992px) {
   .navbar {
     height: 70px;
@@ -996,7 +998,7 @@ body::-webkit-scrollbar {
     left: -100%;
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: #000;
+    background-color: #5555556e;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -1098,6 +1100,10 @@ body::-webkit-scrollbar {
 
   .navbar {
     height: 5rem;
+  }
+
+  .center-nav {
+    background-color: transparent;
   }
 
   .nav-links {
@@ -1242,5 +1248,209 @@ body::-webkit-scrollbar {
 
   .prfr-block {
     height: 50vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .part5 {
+    padding: 50px;
+  }
+
+  .prfv {
+    padding: 10px;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prfv2 img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .prfv1 {
+    padding: 10px;
+  }
+
+  .prfv1 h2 {
+    font-size: 20px;
+  }
+
+  .prfv1 p {
+    font-size: 13px;
+  }
+
+  .prfv1 button {
+    padding: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 600px) {
+  .main1 {
+    margin: 200px 0px 10px 10px;
+    padding: 10px;
+    width: 60%;
+  }
+
+  .main1 h1 {
+    font-size: 30px;
+  }
+
+  .button {
+    display: flex;
+  }
+
+  .button button {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .left {
+    width: 50%;
+    height: 100%;
+    background: rgba(128, 0, 0, 0.759);
+    align-items: center;
+    z-index: 9999;
+  }
+  .center-nav {
+    align-items: center;
+    background: transparent;
+  }
+  .nav-links {
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .part4 {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prfr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .prfv {
+    align-items: center;
+  }
+
+  .prfv1 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prfv2 {
+    align-items: center;
+    justify-content: center;
+  }
+  .prfv2 img {
+    border-radius: 0 10px 0 10px;
+    align-items: center;
+  }
+
+  .scroll-container {
+    display: none;
+  }
+
+  .scroll-logos img {
+    height: 40px;
+  }
+
+  .scroll-container1 {
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-logos img {
+    height: 40px;
+  }
+  .main1 {
+    margin: 200px 0px 10px 10px;
+    padding: 10px;
+    width: 60%;
+  }
+
+  .main1 h1 {
+    font-size: 30px;
+  }
+
+  .button {
+    display: flex;
+  }
+
+  .button button {
+    font-size: 9px;
+    padding: 4px;
+  }
+  .left {
+    background: rgba(128, 0, 0, 0.759);
+    align-items: center;
+  }
+  .center-nav {
+    align-items: center;
+    background: transparent;
+  }
+  .nav-links {
+    margin-left: 77px;
+    align-items: center;
+    background-color: transparent;
+  }
+  .hamburger span {
+    background-color: #003300;
+  }
+  .scroll-container {
+    display: none;
+  }
+  .part4 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prfr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .prfr1 img,
+  .prfr2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .prtx1,
+  .prtx2 {
+    margin-top: 10px;
+  }
+
+  .prtx1 img,
+  .prtx2 img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .prtx-text h3 {
+    font-size: 18px;
+  }
+
+  .prtx-text p {
+    font-size: 14px;
+    color: black;
   }
 }
