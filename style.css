@@ -1308,20 +1308,12 @@ body::-webkit-scrollbar {
     font-size: 10px;
     padding: 5px;
   }
-  .left {
-    width: 50%;
-    height: 100%;
-    background: rgba(128, 0, 0, 0.759);
-    align-items: center;
-    z-index: 9999;
-  }
+
   .center-nav {
     align-items: center;
-    background: transparent;
   }
   .nav-links {
     align-items: center;
-    background-color: transparent;
   }
 
   .part4 {
@@ -1358,15 +1350,8 @@ body::-webkit-scrollbar {
     align-items: center;
   }
 
-  .scroll-container {
-    display: none;
-  }
-
   .scroll-logos img {
     height: 40px;
-  }
-
-  .scroll-container1 {
   }
 }
 
