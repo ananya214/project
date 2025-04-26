@@ -1335,6 +1335,10 @@ body::-webkit-scrollbar {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.303);
 }
 
+.front {
+  position: absolute;
+}
+
 .card.green {
   background-color: #e83f25;
 }
@@ -1588,4 +1592,39 @@ body::-webkit-scrollbar {
   width: 38%;
   height: 100%;
   object-fit: cover;
+}
+
+.card:hover .front2 {
+  font-size: small;
+}
+
+.card:hover .front1 {
+  font-size: 25px;
+}
+
+.card:hover .front1,
+.card:hover .front2 {
+  transform: scale(0.85) translateX(-70px); /* move left */
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  color: black;
+}
+
+.front1,
+.front2 {
+  transition: all 0.4s ease;
+}
+
+.front1::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black; /* or any color you want */
+  transition: width 0.4s ease;
+  margin-top: 8px; /* little space below text */
+}
+
+.card:hover .front1::after {
+  width: 50%; /* or 100% depending on how long you want the line */
 }
