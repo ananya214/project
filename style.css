@@ -1311,6 +1311,7 @@ body::-webkit-scrollbar {
     color: black;
   }
 }
+
 .card-container {
   padding: 50px 0;
   display: flex;
@@ -1519,28 +1520,6 @@ body::-webkit-scrollbar {
   background-color: #e83f25;
 }
 
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .card:hover {
-    width: 100%;
-  }
-
-  .card-details {
-    left: 0;
-    top: 100%;
-    width: 100%;
-  }
-
-  .card:hover .card-details {
-    left: 0;
-    top: 0;
-  }
-}
-
 .card:hover .image-section img {
   display: none;
 }
@@ -1627,4 +1606,337 @@ body::-webkit-scrollbar {
 
 .card:hover .front1::after {
   width: 50%; /* or 100% depending on how long you want the line */
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    max-width: 1000px;
+  }
+
+  .card {
+    width: 380px;
+    height: 480px;
+  }
+
+  .card:hover {
+    width: 650px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-container {
+    max-width: 800px;
+  }
+
+  .card {
+    width: 340px;
+    height: 460px;
+    padding-top: 50px;
+  }
+
+  .card:hover {
+    width: 600px;
+    height: 460px;
+  }
+
+  .card-header h2 {
+    font-size: 9px;
+  }
+
+  .card-header p {
+    font-size: 13px;
+  }
+
+  .image-section img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    max-width: 600px;
+    padding: 30px 0;
+  }
+
+  .card {
+    width: 280px;
+    height: 400px;
+    padding-top: 40px;
+  }
+
+  .card:hover {
+    width: 500px;
+    height: 400px;
+  }
+
+  .card-header {
+    padding: 18px;
+  }
+
+  .image-section img {
+    height: 300px;
+  }
+
+  .card-details {
+    padding: 20px 18px;
+    font-size: 12px;
+  }
+
+  .card-details li {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
+  .view-details-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
+  .card {
+    width: 100%;
+    height: 380px;
+    padding-top: 30px;
+  }
+
+  .card:hover {
+    width: 100%;
+    height: 380px;
+  }
+
+  .card-header {
+    padding: 15px;
+  }
+
+  .image-section img {
+    height: 280px;
+  }
+
+  .card-details {
+    padding: 15px;
+    font-size: 11px;
+  }
+
+  .card-details li {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .view-details-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  /* Adjust hover effects for mobile */
+  .card:hover .front1,
+  .card:hover .front2 {
+    transform: scale(0.8) translateX(-40px);
+  }
+}
+
+/* Special case for very small screens */
+@media (max-width: 400px) {
+  .card {
+    height: 350px;
+  }
+
+  .card:hover {
+    height: 350px;
+  }
+
+  .image-section img {
+    height: 250px;
+  }
+
+  .card-header h2 {
+    font-size: 8px;
+  }
+
+  .card-header p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .card-container {
+    padding: 15px 8px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    min-height: 500px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: none;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* NEW CODE STARTS HERE */
+  .card:hover h3,
+  .card:hover p {
+    font-size: 11px; /* Reduce font size */
+    transform: translateX(5px); /* Move to right */
+    transition: all 0.3s ease;
+  }
+  /* NEW CODE ENDS HERE */
+
+  .card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    padding: 15px 15px 10px;
+  }
+
+  .front1 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    transition: all 0.3s ease; /* Added for smoothness */
+  }
+
+  .front2 {
+    font-size: 13px;
+    line-height: 2;
+    transition: all 0.3s ease; /* Added for smoothness */
+  }
+
+  .image-section {
+    height: 200px;
+    min-height: 200px;
+    position: relative;
+  }
+
+  .card.active {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .card.active .card-details {
+    max-height: 300px;
+    padding: 15px 15px;
+    opacity: 1;
+  }
+
+  .card.active .plus-button {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .card.active .image-section::after {
+    opacity: 0.3;
+  }
+
+  .plus-button {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    background-color: rgba(0, 77, 64, 0.95);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .card-details {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    padding: 0 15px;
+    opacity: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(30, 30, 30, 0.95) 100%
+    );
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  .card-details ul {
+    padding-left: 10px;
+  }
+
+  .card-details li {
+    font-size: 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    padding-left: 15px;
+  }
+
+  .card-details li::before {
+    left: 3px;
+    font-size: 16px;
+  }
+
+  .view-details-btn {
+    width: calc(100% - 30px);
+    margin: 15px auto 0;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: linear-gradient(to right, #004d40, #00796b);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .image-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .card {
+    width: calc(50% - 15px);
+  }
+
+  .card:hover {
+    width: calc(50% - 15px);
+  }
+
+  /* NEW CODE STARTS HERE */
+  .card:hover .card-header h2,
+  .card:hover .card-header p {
+    font-size: 12px; /* Slightly bigger than mobile */
+    transform: translateX(5px); /* Move to right */
+    transition: all 0.3s ease;
+  }
+  /* NEW CODE ENDS HERE */
 }
